@@ -26,3 +26,7 @@ if (IMC < 18.5){
 }else{
     console.log("Obesidade")
 }
+
+const numero = 10; 
+const numeroEmTexto = '10'; 
+console.log(numero === numeroEmTexto);

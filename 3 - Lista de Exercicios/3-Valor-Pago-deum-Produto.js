@@ -9,4 +9,23 @@ Código Condição de pagamento:
 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 */
 
+const descontoDebito = 0.10;
+const descontoDinheiroPix = 0.15
+const juros = 0.1;
 
+const produto = 20;
+const formaPagamento = "Credito2x";
+
+
+if (formaPagamento === "PIX" || formaPagamento === "Dinheiro"){
+    const totalApagar = produto - (produto * descontoDinheiroPix);
+    console.log(totalApagar);
+}else if (formaPagamento === "debito"){
+    const totalApagar = produto - (produto * descontoDebito)
+    console.log(totalApagar);
+}else if(formaPagamento === "Credito3x"){
+    const totalApagar = produto + (produto * juros)
+    console.log(totalApagar);
+}else{
+    console.log(produto)
+}

@@ -9,3 +9,20 @@
  * - IMC entre 25 e 30, acima do peso;
  * - IMC acima de 30, obesidade;
  */
+
+const peso = 109;
+const altura = 1.82;
+
+const IMC = peso / (altura * altura);
+
+console.log(IMC);
+
+if (IMC < 18.5){
+    console.log("Abaixo do Peso")
+}else if (IMC > 18.5 && IMC < 25){
+    console.log("Peso Normal")
+}else if (IMC > 25 && IMC < 30){
+    console.log("Acima do peso")
+}else{
+    console.log("Obesidade")
+}

@@ -8,3 +8,12 @@ Classificação:
 - Média acima de 7, passou de semestre;
 */
 
+const Média = 5 && 7;
+const nota1 = 6;
+const nota2 = 8;
+const nota3 = 7;
+
+const media = (nota1 + nota2 + nota3) / 3;
+
+if (media < 5) {
+    console.log("Reprovação");

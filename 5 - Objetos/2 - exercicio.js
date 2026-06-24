@@ -26,18 +26,26 @@ class Pessoa {
     classificacaoIMC() {
         const IMC = this.calcularIMC();
         if (IMC < 18.5) {
-            return "Abaixo do Peso";
+            const falta = (18.5 - IMC);
+            const faltapeso = falta + IMC * (this.altura * this.altura);
+            return `Abaixo do Peso por ${faltapeso}`;
         } else if (IMC >= 18.5 && IMC < 25) {
             return "Peso Normal";
         } else if (IMC >= 25 && IMC < 30) {
-            return "Acima do peso";
+            const falta = (IMC - 30);
+            const faltapeso =  IMC - falta * (this.altura * this.altura);
+            const pesoideal = this.peso - faltapeso;
+            return `Acima do peso por ${faltapeso}, peso ideal ${pesoideal}`;
         } else {
-            return "Obesidade";
+            const falta = (IMC - 31);
+            const faltapeso = IMC - falta * (this.altura * this.altura);
+            const pesoideal = this.peso - faltapeso;
+            return `Obesidadepor ${faltapeso}, peso ideal ${pesoideal}`;
         }
     }
 }
 
-const jose = new Pessoa("José", 30, 1.75, 70);
+const jose = new Pessoa("José", 30, 1.83, 102);
 console.log(jose.calcularIMC().toFixed(2));
 
 console.log(jose.classificacaoIMC());

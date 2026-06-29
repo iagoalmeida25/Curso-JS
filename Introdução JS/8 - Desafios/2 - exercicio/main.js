@@ -18,7 +18,7 @@ const { gets, print } = require('./funcao-auxiliar');
 
 let maiorPar = 0;
 
-let menorImpar = 9999;
+let menorImpar = 9999999999999;
 
 for (let i = 0; i <= 6; i++){
     let numeroInformado = gets();
@@ -31,5 +31,5 @@ for (let i = 0; i <= 6; i++){
     }
 }
 
-print(maiorPar);
-print(menorImpar);
+print('Maior número par: ' + maiorPar);
+print('Menor número impar: ' + menorImpar);
